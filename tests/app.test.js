@@ -75,8 +75,8 @@ describe("API Endpoint tests", () => {
            },
          ] 
     });
+    expect(res.body.employees.length).toBe(3);
     });
-        expect(res.body.employees.length).toBe(3);
     it("GET /employees/details/:id should get an employee by ID", async () => {
         const res = await request(server).get("/employees/details/1");
         expect(res.status).toBe(200);
